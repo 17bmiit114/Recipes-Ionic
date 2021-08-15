@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title  class="ion-text-center">Recipes</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="onAdd()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let recipe of recipes" >
+    <ion-item>
+      <ion-avatar slot="start" [routerLink]="['./',recipe.id]" >
+        <img [src]="recipe.imageUrl" />
+      </ion-avatar>
+      <ion-label [routerLink]="['./',recipe.id]" >{{ recipe.title }}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="onEdit(recipe)">
+          <ion-icon slot="icon-only" name="pencil"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>     
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add" (click)="onAdd()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
