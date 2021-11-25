@@ -5,7 +5,7 @@ import { Recipes } from './recipes.model';
   providedIn: 'root'
 })
 export class RecipesService {
-  /* private recipes: Recipes[] = [
+   private recipes: Recipes[] = [
     {
       id: 'Recipe1',
       title: 'Maggi',
@@ -31,8 +31,8 @@ export class RecipesService {
       imageUrl: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80'
     }
   ];
-  */
-  private recipes: Recipes[] = [];
+  
+  //private recipes: Recipes[] = [];
   constructor() { }
 
   getAllRecipes(){
